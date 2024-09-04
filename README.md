@@ -1,2 +1,2 @@
-# KotlinMülakatSoruları
-Gökhan Özürk'ün kekod kanalaında yayınladığı dersler izlenerek mülakatta çıkabilecek soruları not alarak paylaştığım bir repodur.
+# KotlinInterviewQuestions
+It is a repo where I watched the lessons broadcast by Gökhan Özürk on the [Kekod channel](https://www.youtube.com/@KeKod/streams) and shared notes of possible questions that may come up in the interview. 
