@@ -2,6 +2,7 @@
 Kotlin Interview Questions 
   <img src="https://img.shields.io/badge/-Kotlin-7c6fe1?style=flat&logo=kotlin&logoColor=white">
 </h1> 
+
 It is a repo where I watched the lessons broadcast by Gökhan Özürk on the [Kekod channel](https://www.youtube.com/@KeKod/streams) and shared notes of possible questions that may come up in the interview. 
 
 ## 1- Why Kotlin?
