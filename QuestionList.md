@@ -1,7 +1,7 @@
 [⬅ Repository](./README.md)
 
 # Question List
-  ### 1. [Why Kotlin?](https://github.com/bengisusaahin/KotlinInterviewQuestions#why-kotlin)
+  ### 1. [Why Kotlin?](https://github.com/bengisusaahin/KotlinInterviewQuestions#1-why-kotlin)
   ### 2. [What are the different ways of using an object?](https://github.com/bengisusaahin/KotlinInterviewQuestions#what-are-the-different-ways-of-using-an-object)
   ### 3. [What is the difference between `val` and `var`?](https://github.com/bengisusaahin/KotlinInterviewQuestions#what-is-the-difference-between-`val`-and-`var`)
   ### 4. [What is "Type Inference"? In what cases is it essential to specify the type?](https://github.com/bengisusaahin/KotlinInterviewQuestions#what-is-"Type-Inference"-in-what-cases-is-it-essential-to-specify-the-type)
