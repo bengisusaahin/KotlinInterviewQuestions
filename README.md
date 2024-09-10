@@ -69,3 +69,16 @@ fun main() {
 }
 
 ```
+
+## 7- Is there no primitive type in Kotlin?
+In Kotlin, there are no direct primitive types, but this doesn't lead to any performance drawbacks. In Kotlin, everything is represented as a class. For example, 'Int', 'Boolean', and 'Double' are all classes in Kotlin. However, Kotlin converts these data types into primitive types during compile time in the resulting Java bytecode. This allows Kotlin to retain the flexibility of its class-based system while also benefiting from the performance optimizations of primitive types in Java.
+
+For example:
+```kotlin
+val number: Int = 10
+```
+Here, 'Int' is a Kotlin class, but when the Kotlin compiler translates this to Java bytecode, it automatically converts it into the primitive int type in Java. So, even though everything in Kotlin is represented as a class, at runtime, these classes are converted to primitive types when necessary.
+
+Java's advantages of lower memory usage and faster access due to primitive types are preserved. This approach allows Kotlin to offer high-level programming features (like class-based structures) without sacrificing performance.
+
+In summary, while Kotlin doesn’t directly use primitive types, during compile time, these types are converted to primitives in Java bytecode, ensuring that Kotlin is on par with Java in terms of performance.
