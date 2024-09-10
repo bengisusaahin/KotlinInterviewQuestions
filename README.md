@@ -115,3 +115,17 @@ val b = "Hello" // Another string with the same content
 println(a === b) // true, because both a and b reference the same interned string in memory
 
 ```
+## 11- What happens when a primitive variable is made nullable and reference equality is checked with ===?
+Kotlin allows `Byte` variables with the same value to be stored in memory as a single reference. This prevents the unnecessary creation of multiple objects in memory and optimizes memory usage. If a value outside the byte range of -128 to +127 is assigned, it will return false. However, if the value is within the byte range, it will share the same memory address, returning true. This means that different nullable variables with the same value within the byte range point to the same memory address.
+
+```kotlin
+val number: Int = 127 //int
+val boxedNumber: Int? = number
+val anotherBoxedNumber: Int? = number
+println(boxedNumber === anotherBoxedNumber) //true
+
+val number2: Int = 128 //int
+val boxedNumber2: Int? = number2
+val anotherBoxedNumber2: Int? = number2
+println(boxedNumber2 === anotherBoxedNumber2) //false
+```
