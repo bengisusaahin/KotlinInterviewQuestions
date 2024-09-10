@@ -85,3 +85,10 @@ In summary, while Kotlin doesn’t directly use primitive types, during compile 
 
 ## 8- If a variable is assigned a `null` value and no type is specified, how does Kotlin interpret this variable?
 If a variable is assigned a `null` value without specifying its type, Kotlin interprets it as `Nothing?` during type inference. The reason for this is that Kotlin cannot determine what type the variable should hold since `null` doesn't belong to any specific type. In this case, Kotlin uses the most generic representation of an "empty" state, which is `Nothing?`. The `Nothing?` type is typically used in scenarios like exception-throwing or unresolvable situations.
+
+## 9- !! vs ?.
+Kotlin's `null safety` mechanism helps prevent errors that can arise when working with null values. To reduce the frequent occurrence of `NullPointerException (NPE)` errors commonly encountered in Java, Kotlin has enhanced this mechanism by making a clear distinction between nullable and non-nullable types. In this context, the `!!` and `?.` operators offer different uses regarding null safety.
+
+`?.`: The safe call operator is used in situations where we want to avoid crashing the code in less critical scenarios. It skips the operation when the value is `null` and does not throw an error.
+
+`!!`: The non-null assertion operator is used to assert that a variable is definitely not null. If the value is `null`, it throws an error and halts the program.
