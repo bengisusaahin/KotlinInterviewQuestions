@@ -17,6 +17,28 @@ It is a repo where I watched the lessons broadcast by Gökhan Özürk on the [Ke
 ## 3- What is the difference between `val` and `var`?
 - `val` (short for "value") is used for read-only variables. Once a `val` is assigned a value, it cannot be changed. It's essentially a constant reference.
 - `var` (short for "variable") is used for mutable variables, meaning their values can be reassigned.
+
+However, it’s important to note that `val` is read-only and not immutable. This means that while the reference itself cannot be changed, the underlying data it points to can still be modified if it’s a mutable object.
+
+In the example below:
+```kotlin
+class Box {
+    var width: Int = 20
+    var height: Int = 40
+    var length: Int = 50
+    var usedSpace: Int = 0
+
+    val availableSpace: Int
+        get() {
+            return (width * height * length) - usedSpace
+        }
+}
+
+```
+Here, availableSpace is defined with `val`, meaning it is read-only—you cannot directly assign a new value to it. However, its value can still change indirectly because it depends on mutable properties like width, height, length, and usedSpace, all of which are `var` and can be reassigned. So, while the availableSpace itself is read-only, the calculated result can change as the other mutable variables change.
+
+This example illustrates how `val` is not entirely immutable, but only read-only in terms of direct assignment.
+
 ## 4- What is "Type Inference"? In what cases is it essential to specify the type?
 Type inference is when the compiler automatically deduces the type of a variable based on its assigned value. For example, val name = "Bengisu" is inferred as a String by the compiler.
 Explicit type declaration is required in cases where the type cannot be determined from the initialization, such as in function signatures or when declaring a variable without an immediate assignment.
