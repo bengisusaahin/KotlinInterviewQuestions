@@ -92,3 +92,26 @@ Kotlin's `null safety` mechanism helps prevent errors that can arise when workin
 `?.`: The safe call operator is used in situations where we want to avoid crashing the code in less critical scenarios. It skips the operation when the value is `null` and does not throw an error.
 
 `!!`: The non-null assertion operator is used to assert that a variable is definitely not null. If the value is `null`, it throws an error and halts the program.
+
+## 10- === vs ==
+`===`: Checks for reference equality. This means it checks whether two objects point to the same reference in memory.
+
+`==`: Checks for value equality. This means it checks whether the contents (values) of two objects are equal.
+Example:
+```kotlin
+val a = String("Hello") // Creates a new String object
+val b = String("Hello") // Creates another new String object
+val c = a
+
+println(a === b) // false, because a and b are different objects
+println(a === c) // true, because c references the same object as a
+```
+Another Example:
+```kotlin
+
+val a = "Hello" // A string created with string interning
+val b = "Hello" // Another string with the same content
+
+println(a === b) // true, because both a and b reference the same interned string in memory
+
+```
