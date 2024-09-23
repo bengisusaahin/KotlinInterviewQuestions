@@ -166,3 +166,12 @@ For example, by declaring a variable like
 var nullableName: String? = null
 ```
 we specify that this variable can hold a null value. This feature helps prevent null reference errors(NullPointerExceptions), which are a common source of bugs in many programming languages.
+
+## 15- What is the difference in memory management between a nullable variable having a value and being null?
+When a nullable variable has a value or is null, there is a difference in memory management. When we make primitive types nullable, we convert them to reference types. This means that making a variable null does not imply that no memory is allocated for that variable. Instead, memory is allocated for the variable itself, but not for its value.
+
+For example, when we declare
+```kotlin 
+ val age: Int? = null
+```
+a reference space is allocated in memory for age. However, when this variable’s value is null, no memory is allocated to store that value. In other words, memory is still reserved for the variable itself, but not for its value. This distinction is important for memory efficiency.
