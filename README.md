@@ -196,3 +196,8 @@ fun handleInput(input: Any) {
 }
 ```
 In this example, we check if the input variable is a String. If it is, Kotlin automatically accepts that this variable is a String, allowing us to immediately access the length property. This makes the code cleaner and more readable.
+
+## 18- The `||` and `&&` operators have a lazy evaluation mechanism. What does this mean? (Lazily)
+If the left side of the `||` operator is true, there’s no need to check the right side, as the expression will be considered true regardless.
+
+Similarly, if the left side of the `&&` operator is false, the right side won't be evaluated because the result will be false either way.
