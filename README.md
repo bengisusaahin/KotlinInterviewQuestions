@@ -157,3 +157,12 @@ For example, when we define a variable like
 val name: String = "Bengisu"
 ```
 we cannot assign a value of another type to the `name` variable. This helps us detect errors earlier in the development process.
+
+## 14- Explain the concept of **"Null Safety"**.
+Null Safety is a concept that ensures variables cannot hold null values by default, providing us with the ability to write reliable code. In Kotlin, if we want to indicate that a variable can be null, we need to append a ? to its type.
+
+For example, by declaring a variable like
+```kotlin 
+var nullableName: String? = null
+```
+we specify that this variable can hold a null value. This feature helps prevent null reference errors(NullPointerExceptions), which are a common source of bugs in many programming languages.
