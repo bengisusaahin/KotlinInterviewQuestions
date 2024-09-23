@@ -180,3 +180,19 @@ a reference space is allocated in memory for age. However, when this variable’
 Primitive type variables are generally stored in stack memory. The stack is very fast for memory management because data is organized in a last-in, first-out (LIFO) manner. This allows for quick allocation and deallocation of memory space.
 
 On the other hand, reference type variables are typically stored in heap memory. The heap has a more complex memory management structure; here, data allocation and deallocation can be slower because finding space and managing memory chunks in the heap is more complicated and time-consuming.
+
+## 17- What is Smart Casting?
+Smart Casting is a very useful feature in Kotlin. This feature helps the compiler automatically understand the type of a variable under certain conditions. In other words, when you check whether a variable is of a certain type, if that check is successful, the Kotlin compiler accepts that the variable is of that type and allows you to access features specific to that type.
+
+For example:
+```kotlin 
+fun handleInput(input: Any) {
+    if (input is String) {
+        // Here we know that input is a String
+        println("Length: ${input.length}") // We can access the length property thanks to Smart Casting
+    } else {
+        println("Not a string")
+    }
+}
+```
+In this example, we check if the input variable is a String. If it is, Kotlin automatically accepts that this variable is a String, allowing us to immediately access the length property. This makes the code cleaner and more readable.
