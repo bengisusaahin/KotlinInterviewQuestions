@@ -212,4 +212,19 @@ If the array is declared with var, it is mutable because we can assign a new arr
 If it is declared with val, it is immutable because we can't assign a new array, but we can still modify the values at each index.
 Regardless of whether the array is declared with val or var, the values at each index can be modified, so the array is mutable in terms of its elements. However, when we perform an operation that seems to modify the array, like adding elements, a new array is created and assigned, which makes it immutable in that specific context.
 
+## 20- Can the == operator be used to compare two arrays?
+Using the == operator to compare two arrays compares their memory references, not their contents. In other words, the == operator checks whether the two arrays point to the same memory location. Even if two different arrays contain the same elements, == will return false because each has a different reference. For example:
+```kotlin 
+val array1 = arrayOf(1, 2, 3)
+val array2 = arrayOf(1, 2, 3)
 
+println(array1 == array2) // false
+```
+In this case, `array1` and `array2` occupy different memory addresses. The reason behind this is that arrays in Kotlin are reference types. Reference types represent a memory address, while value types represent the values directly. Therefore, comparisons made using the `==` operator only check for reference equality.
+
+To compare contents, functions like `contentEquals` or `contentDeepEquals` should be used. These functions allow us to perform an actual equality check by comparing the elements within the two arrays. For example:
+
+```kotlin 
+println(array1.contentEquals(array2)) // true
+```
+This approach prevents unexpected results in your program and enhances the reliability of your code. Accurately comparing array contents is critical for ensuring data integrity.
