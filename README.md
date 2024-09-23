@@ -147,4 +147,13 @@ val list = mutableListOf(1, 2, 3)  // The list can be modified, but the referenc
 const val PI = 3.14  // Compile-time constant
 const val APP_NAME = "MyApp"  // A constant string
 ```
+## 13- Explain the concept of **"Type Safety"**.
+Type Safety is an important feature of a programming language that defines how data types are used. Essentially, it ensures that variables and functions are compatible with expected types, reducing the likelihood of encountering type mismatches while writing code.
 
+In Kotlin, type safety is enforced at compile time. This means that when we declare a variable, we assign it a specific type, and if we try to assign a value of a different type, the compiler throws an error.
+
+For example, when we define a variable like 
+```kotlin 
+val name: String = "Bengisu"
+```
+we cannot assign a value of another type to the `name` variable. This helps us detect errors earlier in the development process.
