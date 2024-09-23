@@ -5,6 +5,12 @@ Kotlin Interview Questions
 
 It is a repo where I watched the lessons broadcast by Gökhan Özürk on the [Kekod channel](https://www.youtube.com/@KeKod/streams) and shared notes of possible questions that may come up in the interview. 
 
+Additionally, I’ve shared the Turkish version of these notes as a series on [Medium](https://medium.com/p/88d0408eb3cc). 
+
+<h2 align="start">
+Basic Types
+</h2> 
+
 ## 1- Why Kotlin?
 - Oracle and Google had a legal dispute over the use of paid APIs in Java, leading Google to embrace Kotlin as a more flexible alternative.
 - Kotlin allows developers to take advantage of functional programming features, making code more concise and expressive.
@@ -129,3 +135,16 @@ val boxedNumber2: Int? = number2
 val anotherBoxedNumber2: Int? = number2
 println(boxedNumber2 === anotherBoxedNumber2) //false
 ```
+
+## 12- What is the difference between val and const val?
+`val` is a read-only variable. Once it is assigned, its reference cannot be changed. Its value can be assigned at **runtime**, meaning it can be calculated while running the program.
+```kotlin
+val currentTime = System.currentTimeMillis()  // Assigned at runtime
+val list = mutableListOf(1, 2, 3)  // The list can be modified, but the reference cannot be reassigned
+```
+`const val` represents a value that is constant at compile time. This constant must be of a primitive type or String. Its value can only be assigned to constants known during **compile time**, meaning it is completely immutable. `const val` can only be defined at the top level or inside an object/companion object.
+```kotlin
+const val PI = 3.14  // Compile-time constant
+const val APP_NAME = "MyApp"  // A constant string
+```
+
