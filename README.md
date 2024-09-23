@@ -175,3 +175,8 @@ For example, when we declare
  val age: Int? = null
 ```
 a reference space is allocated in memory for age. However, when this variable’s value is null, no memory is allocated to store that value. In other words, memory is still reserved for the variable itself, but not for its value. This distinction is important for memory efficiency.
+
+## 16- Why do primitive-type variables work faster than reference-type variables?
+Primitive type variables are generally stored in stack memory. The stack is very fast for memory management because data is organized in a last-in, first-out (LIFO) manner. This allows for quick allocation and deallocation of memory space.
+
+On the other hand, reference type variables are typically stored in heap memory. The heap has a more complex memory management structure; here, data allocation and deallocation can be slower because finding space and managing memory chunks in the heap is more complicated and time-consuming.
