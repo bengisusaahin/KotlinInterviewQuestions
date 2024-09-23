@@ -5,7 +5,7 @@ Kotlin Interview Questions
 
 It is a repo where I watched the lessons broadcast by Gökhan Özürk on the [Kekod channel](https://www.youtube.com/@KeKod/streams) and shared notes of possible questions that may come up in the interview. 
 
-Additionally, I’ve shared the Turkish version of these notes as a series on [Medium](https://medium.com/p/88d0408eb3cc). 
+Additionally, I’ve shared the Turkish version of these notes as a series on [Medium](https://medium.com/@bengisusaahin). 
 
 <h2 align="start">
 Basic Types
