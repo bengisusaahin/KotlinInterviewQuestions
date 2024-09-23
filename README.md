@@ -201,3 +201,15 @@ In this example, we check if the input variable is a String. If it is, Kotlin au
 If the left side of the `||` operator is true, there’s no need to check the right side, as the expression will be considered true regardless.
 
 Similarly, if the left side of the `&&` operator is false, the right side won't be evaluated because the result will be false either way.
+
+## 19- Are arrays mutable or immutable?
+
+Arrays are mutable because their values can be changed based on their indices. When we say mutable, it means that even if the array is declared with val, we are changing the reference of its values. This leads to new memory being allocated on the heap. In this sense, we are not actually modifying the data itself but replacing it with new data, which technically makes the array immutable in terms of its reference. However, the values within the indices of the array can always be modified, so the array is mutable in that regard.
+
+To summarize:
+
+If the array is declared with var, it is mutable because we can assign a new array to it.
+If it is declared with val, it is immutable because we can't assign a new array, but we can still modify the values at each index.
+Regardless of whether the array is declared with val or var, the values at each index can be modified, so the array is mutable in terms of its elements. However, when we perform an operation that seems to modify the array, like adding elements, a new array is created and assigned, which makes it immutable in that specific context.
+
+
