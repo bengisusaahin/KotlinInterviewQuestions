@@ -7,6 +7,17 @@ It is a repo where I watched the lessons broadcast by Gökhan Özürk on the [Ke
 
 Additionally, I’ve shared the Turkish version of these notes as a series on [Medium](https://medium.com/@bengisusaahin). 
 
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
+  <ol>
+    <li>
+      <a href="#basic-types">Basic Types</a>
+    </li>
+    <li><a href="#control-flows">Control Flows</a></li>
+  </ol>
+</details>
+
 <h2 align="start">
 Basic Types
 </h2> 
