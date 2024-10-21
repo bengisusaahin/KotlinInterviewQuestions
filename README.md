@@ -228,3 +228,11 @@ To compare contents, functions like `contentEquals` or `contentDeepEquals` shoul
 println(array1.contentEquals(array2)) // true
 ```
 This approach prevents unexpected results in your program and enhances the reliability of your code. Accurately comparing array contents is critical for ensuring data integrity.
+
+<h2 align="start">
+Control Flows
+</h2> 
+
+## 1- When do we use the functional forms of operators?
+
+When one of the two numbers being compared is `nullable`, we prefer to use the functional forms of operators instead of the standard operators. This is because when one of the operators used in the comparison is `nullable`, the standard comparison operators (<, >, <=, >=, ==, !=) do not perform `null` checks, which can lead to unexpected results. This situation may cause errors during the application's execution.
