@@ -263,3 +263,22 @@ In this approach, we can check if a variable (e.g., grade) is null and return ea
 
 ## 3- Is writing if, if, if more performant, or else if?
 Using `else if` is more performant because once a condition is met, the other conditions are not checked. If you write separate if statements, each condition will be evaluated independently, leading to each one being checked in turn. With `else if`, once a true condition is found, the rest of the conditions are skipped, making the process more efficient.
+
+## 4- What is a destructuring declaration?
+
+One of the coolest features of data classes is the `destructuring declaration`. This allows us to extract the values inside a `data class` in a single step, rather than accessing each property individually. It’s a handy way to make your code cleaner and more readable.
+
+For example:
+```kotlin 
+data class Person(val name: String, val age: Int)
+
+val person = Person("Bengisu", 25)
+
+// Destructuring Declaration
+val (name, age) = person
+
+println("Name: $name, Age: $age")
+// Output: Name: Bengisu, Age: 25
+
+```
+As you can see here, instead of accessing `name` and `age` separately, we can assign them in one line using `destructuring`. This makes it a quick and efficient way to work with class properties. It’s especially useful when working with functions or collections!
