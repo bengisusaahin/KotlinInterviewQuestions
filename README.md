@@ -317,3 +317,12 @@ sendMessage("Hi!", recipient = "user@example.com")
 ```
 
 As you can see, when we don't specify a recipient, the default recipient takes effect. This makes our function more practical and user-friendly.
+
+## 7- What are the performance effects and differences of using Vararg?
+In Kotlin, `vararg` is a useful feature that allows you to pass a variable number of arguments to a function. However, there are some important points to consider when using this feature.
+
+What is Vararg?
+`vararg` represents a list of parameters. You can use it in situations where you don't know how many arguments you will pass. However, using `vararg` just because you're passing "a lot of arguments" can unnecessarily complicate your code. This kind of usage can be referred to as "ugly code"!
+
+Performance Difference
+Depending on where it is used, there can be a performance difference between `vararg` and `Array`. When you use `vararg`, Kotlin creates an `Array` in the background. This means an additional cost and can lead to differences in decompiled code. For example, the background code generated when using `vararg` may be more complex than directly using an `Array`. Therefore, you should consider your performance requirements when deciding which method to use.
