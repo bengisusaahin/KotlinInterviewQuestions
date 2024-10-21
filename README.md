@@ -253,10 +253,13 @@ When one of the two numbers being compared is `nullable`, we prefer to use the f
 When working with operators, we can utilize nullable expressions in the following ways:
 
 ?.let: Scope Function
-The ?.let function allows us to execute a block of code only if the value is not null. It provides a safe way to work with nullable types, ensuring that the code inside the let block is executed only when the expression preceding it is not null.
+The ?.let function allows us to execute a code block only if the value is not null. It provides a safe way to work with nullable types, ensuring that the code inside the let block is executed only when the preceding expression is not null.
 
 Smart Casting: 
 ```kotlin 
 if (grade == null) { return }
 ```
-In this approach, we can check if a variable (e.g., grade) is null and return early from a function if it is. If the check passes, the IDE understands that grade is not null for the subsequent code, allowing us to safely use it without additional null checks.
+In this approach, we can check if a variable (e.g., grade) is null and return early from a function if it is. If the check passes, the IDE understands that the grade is not null for the subsequent code, allowing us to use it without additional null checks safely.
+
+## 3- Is writing if, if, if more performant, or else if?
+Using `else if` is more performant because once a condition is met, the other conditions are not checked. If you write separate if statements, each condition will be evaluated independently, leading to each one being checked in turn. With `else if`, once a true condition is found, the rest of the conditions are skipped, making the process more efficient.
