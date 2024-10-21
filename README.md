@@ -236,3 +236,16 @@ Control Flows
 ## 1- When do we use the functional forms of operators?
 
 When one of the two numbers being compared is `nullable`, we prefer to use the functional forms of operators instead of the standard operators. This is because when one of the operators used in the comparison is `nullable`, the standard comparison operators (<, >, <=, >=, ==, !=) do not perform `null` checks, which can lead to unexpected results. This situation may cause errors during the application's execution.
+
+## 2- How do we use nullable expressions with operators?
+
+When working with operators, we can utilize nullable expressions in the following ways:
+
+?.let: Scope Function
+The ?.let function allows us to execute a block of code only if the value is not null. It provides a safe way to work with nullable types, ensuring that the code inside the let block is executed only when the expression preceding it is not null.
+
+Smart Casting: 
+```kotlin 
+if (grade == null) { return }
+```
+In this approach, we can check if a variable (e.g., grade) is null and return early from a function if it is. If the check passes, the IDE understands that grade is not null for the subsequent code, allowing us to safely use it without additional null checks.
