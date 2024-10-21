@@ -282,3 +282,13 @@ println("Name: $name, Age: $age")
 
 ```
 As you can see here, instead of accessing `name` and `age` separately, we can assign them in one line using `destructuring`. This makes it a quick and efficient way to work with class properties. It’s especially useful when working with functions or collections!
+
+## 5- What is the difference between Unit and Nothing?
+
+In Kotlin, `Unit` and `Nothing` are two important types that represent different scenarios.
+
+`Unit`: Represents functions that do not return anything. In other words, when an operation is performed, it does not provide any value upon return. For example, consider a function that prints a message to the screen; this function does not return anything, it simply performs the task. Therefore, its return type is Unit. `Unit` is similar to `void` in Java.
+
+`Nothing`: Used to indicate that a function will never successfully complete or will always throw an error. If a function returns a value of type `Nothing`, it means that it will not return at any point in time. Instead of returning an empty value, `Nothing` indicates that the function will never finish with a normal result.
+
+In summary, while `Unit` represents a situation with no return value, `Nothing` signifies that an operation will never complete, meaning it will never return.
