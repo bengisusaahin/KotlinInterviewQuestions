@@ -326,3 +326,13 @@ What is Vararg?
 
 Performance Difference
 Depending on where it is used, there can be a performance difference between `vararg` and `Array`. When you use `vararg`, Kotlin creates an `Array` in the background. This means an additional cost and can lead to differences in decompiled code. For example, the background code generated when using `vararg` may be more complex than directly using an `Array`. Therefore, you should consider your performance requirements when deciding which method to use.
+
+## 8- In Kotlin, how do you use break, continue, return, and return@label statements to manage control flow within loops and functions? What are the differences between these statements?
+
+break: Used to exit from a loop (for, while). The `break` statement immediately terminates the loop and allows you to exit from it.
+
+continue: Allows you to skip the current iteration of the loop when a specific condition is met. The `continue` statement prevents the remaining code in the loop from being executed and moves to the next iteration.
+
+return: Used to return a result from a function. The `return` statement specifies the return value of the function and exits from it.
+
+return@label: Enables you to return from specific labeled loops or nested functions in more complex loop structures. The `return@label` allows you to specify which function or loop you want to exit from.
