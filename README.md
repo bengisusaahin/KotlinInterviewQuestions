@@ -292,3 +292,28 @@ In Kotlin, `Unit` and `Nothing` are two important types that represent different
 `Nothing`: Used to indicate that a function will never successfully complete or will always throw an error. If a function returns a value of type `Nothing`, it means that it will not return at any point in time. Instead of returning an empty value, `Nothing` indicates that the function will never finish with a normal result.
 
 In summary, while `Unit` represents a situation with no return value, `Nothing` signifies that an operation will never complete, meaning it will never return.
+
+## 6- What is a Default (None) Argument in functions?
+
+In Kotlin, when we provide a default value for a function parameter, we eliminate the necessity of explicitly specifying that parameter every time. It's like offering a backup option! This feature allows us to perform function overloading without writing multiple versions of the same function.
+
+Thanks to default values, let's consider a function that sends a message; we can call this function without specifying the recipient. If we skip mentioning the recipient, the default value we defined will be used automatically. This makes our function calls cleaner and more readable.
+
+Additionally, we can utilize named arguments to clearly indicate which parameters we want to set. This helps us easily understand which argument corresponds to what when calling our function.
+
+Now, let's look at an example:
+
+```kotlin 
+fun sendMessage(message: String, recipient: String = "default@example.com") {
+    println("Sending: '$message' - Recipient: $recipient")
+}
+
+// Calling with default recipient
+sendMessage("Hello!")
+
+// Calling with specified recipient
+sendMessage("Hi!", recipient = "user@example.com")
+
+```
+
+As you can see, when we don't specify a recipient, the default recipient takes effect. This makes our function more practical and user-friendly.
