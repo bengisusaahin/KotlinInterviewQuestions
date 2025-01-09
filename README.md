@@ -15,6 +15,7 @@ Additionally, I’ve shared the Turkish version of these notes as a series on [M
       <a href="#basic-types">Basic Types</a>
     </li>
     <li><a href="#control-flows">Control Flows</a></li>
+    <li><a href="#loops-and-funtions">Loops and Functions</a></li>
   </ol>
 </details>
 
@@ -336,3 +337,17 @@ continue: Allows you to skip the current iteration of the loop when a specific c
 return: Used to return a result from a function. The `return` statement specifies the return value of the function and exits from it.
 
 return@label: Enables you to return from specific labeled loops or nested functions in more complex loop structures. The `return@label` allows you to specify which function or loop you want to exit from.
+
+<h2 align="start">
+Loops and Functions
+</h2> 
+
+## 1- What is the performance difference between passing a String array (vararg) versus passing individual Strings?
+
+In Kotlin, there are two ways to pass multiple parameters to a function:
+
+Using vararg, you can pass parameters as an Array<String>.
+You can pass parameters individually, one by one.
+There is generally no noticeable performance difference. When using vararg, the parameters are internally converted into an Array object. This conversion is very fast for small data sets and is typically imperceptible. However, for large data sets or frequently called functions, using vararg could introduce a very small performance overhead because an extra Array is created with each function call.
+
+That being said, the difference is usually negligible and does not affect the overall performance of the program. Performance concerns are generally more significant in areas such as algorithms or I/O operations.
