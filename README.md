@@ -15,7 +15,7 @@ Additionally, I’ve shared the Turkish version of these notes as a series on [M
       <a href="#basic-types">Basic Types</a>
     </li>
     <li><a href="#control-flows">Control Flows</a></li>
-    <li><a href="#loops-and-funtions">Loops and Functions</a></li>
+    <li><a href="#loops-and-functions">Loops and Functions</a></li>
   </ol>
 </details>
 
