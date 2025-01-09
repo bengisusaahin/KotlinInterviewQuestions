@@ -371,8 +371,6 @@ Performance Impact:
 Infix functions have no performance impact. The function call is processed in the same way as a regular function call. The main advantage of using infix functions is that they make the code more readable.
 
 ## 3- What is an Extension Function?
-Extension functions are among the "pullable things" of this world! :)
-
 Kotlin allows us to add helper functions to classes that are either read-only (immutable) or that we don’t want to modify directly.
 
 Although these functions are not part of the class itself, they can be used as if they are. This makes the code more readable, organized, and manageable. Extension functions do not impact performance since they are converted to static methods during compilation.
