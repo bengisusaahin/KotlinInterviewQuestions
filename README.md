@@ -376,3 +376,9 @@ Kotlin allows us to add helper functions to classes that are either read-only (i
 Although these functions are not part of the class itself, they can be used as if they are. This makes the code more readable, organized, and manageable. Extension functions do not impact performance since they are converted to static methods during compilation.
 
 To define an extension function, we need a "receiver" class, which determines the class the function will behave as though it belongs to.
+
+## 4- What does an Extension Function correspond to in Java?
+
+Extension functions in Kotlin are equivalent to static functions in Java.
+
+When compiled, an extension function is converted into a static method. The first parameter of this static method represents the instance of the class (receiver) on which the function is called. Subsequent parameters include any additional arguments needed for the function.
