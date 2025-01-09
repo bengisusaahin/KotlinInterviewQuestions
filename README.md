@@ -382,3 +382,21 @@ To define an extension function, we need a "receiver" class, which determines th
 Extension functions in Kotlin are equivalent to static functions in Java.
 
 When compiled, an extension function is converted into a static method. The first parameter of this static method represents the instance of the class (receiver) on which the function is called. Subsequent parameters include any additional arguments needed for the function.
+
+## 5- Can I extend a variable too? How?
+
+This question essentially revolves around understanding the concepts of field (backing field) and property in Kotlin. In Kotlin, properties in a class may appear as variables, but they are actually composed of getter and optionally setter functions.
+
+Extending a Property
+In Kotlin, you can extend a property. However, you must note that backing fields are not accessible in this context. The property behaves like a function and can only define a getter (and setter if needed).
+
+This question essentially revolves around understanding the concepts of field (backing field) and property in Kotlin. In Kotlin, properties in a class may appear as variables, but they are actually composed of getter and optionally setter functions.
+
+Extending a Property
+In Kotlin, you can extend a property. However, you must note that backing fields are not accessible in this context. The property behaves like a function and can only define a getter (and setter if needed).
+```kotlin 
+val String.firstLetter: Char
+    get() = this[0]
+```
+Key Note
+Extension properties do not have backing fields. They are primarily used to extend the functionality of a class without modifying it and cannot act as actual variables.
