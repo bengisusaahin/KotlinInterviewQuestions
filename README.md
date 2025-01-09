@@ -351,3 +351,21 @@ You can pass parameters individually, one by one.
 There is generally no noticeable performance difference. When using vararg, the parameters are internally converted into an Array object. This conversion is very fast for small data sets and is typically imperceptible. However, for large data sets or frequently called functions, using vararg could introduce a very small performance overhead because an extra Array is created with each function call.
 
 That being said, the difference is usually negligible and does not affect the overall performance of the program. Performance concerns are generally more significant in areas such as algorithms or I/O operations.
+
+## 2- What is an Infix function? Does it have any impact on performance?
+An infix function in Kotlin is a type of function that can be written in a more readable way. This function can be called without the dot (.) operator and parentheses, making the code more readable.
+
+Infix functions have the following characteristics:
+
+- They must be either a member function or an extension function.
+- They should take exactly one parameter.
+- They cannot have default parameter values.
+
+You can call infix functions as follows:
+```kotlin 
+a functionName b
+```
+Here, a is the receiver, functionName is the infix function, and b is the parameter passed to the function.
+
+Performance Impact:
+Infix functions have no performance impact. The function call is processed in the same way as a regular function call. The main advantage of using infix functions is that they make the code more readable.
