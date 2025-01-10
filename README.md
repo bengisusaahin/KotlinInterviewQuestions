@@ -422,4 +422,9 @@ with("Interview Series") {
     }
 }
 ```
-When we write context(String, Int), this function can now work with both String and Int types simultaneously.
+When we write context(String, Int), this function can work simultaneously with both String and Int types.
+
+## 7- Higher-Order Functions Provide a Performance Improvement Compared to Interfaces. How Can We Achieve This?
+We can achieve this by using the inline keyword. When we use the inline keyword in a higher-order function, the function’s body is inlined with the code of the passed lambda or function parameter. This means the work of the passed function is directly embedded into the higher-order function, eliminating the need to create an object for the passed function in the background. This results in a performance boost.
+
+This approach is beneficial for functions that are called frequently or require high performance. However, inline should not be used indiscriminately; it should be applied only where it is genuinely needed.
