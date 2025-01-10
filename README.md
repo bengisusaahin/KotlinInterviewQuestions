@@ -441,3 +441,13 @@ The function body is large, called once: It's fine to use inline.
 The function body is small, called many times: It's better not to use inline.
 The function body is small, called once: It doesn't matter, it's up to you.
 The function body is large, called once: Using inline might be beneficial.
+
+## 9- Why Are Non-Local Returns Not Allowed When Calling Nested Higher-Order Functions?
+Non-local return can be used within an inline function, as it refers to returning from the calling function, not just from the lambda or higher-order function. In the case of inline functions, the lambda code is directly inserted into the calling code, allowing non-local returns.
+
+However, for non-inline higher-order functions, non-local returns are not allowed. The reason is that when you're dealing with a non-inline higher-order function, the lambda is treated as a regular object, and returning from it would conflict with the flow of control in the outer function. Therefore, you can only use non-local returns in inline functions, where the lambda code is inlined directly and behaves as part of the original function's body.
+
+To summarize:
+
+Non-local return works with inline functions because the lambda code is directly inserted into the function body.
+Non-local return does not work with non-inline higher-order functions because they are treated as objects and cannot break the flow of the outer function's control.
