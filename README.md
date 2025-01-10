@@ -428,3 +428,16 @@ When we write context(String, Int), this function can work simultaneously with b
 We can achieve this by using the inline keyword. When we use the inline keyword in a higher-order function, the function’s body is inlined with the code of the passed lambda or function parameter. This means the work of the passed function is directly embedded into the higher-order function, eliminating the need to create an object for the passed function in the background. This results in a performance boost.
 
 This approach is beneficial for functions that are called frequently or require high performance. However, inline should not be used indiscriminately; it should be applied only where it is genuinely needed.
+
+## 8- When Should We Avoid Using the Inline Keyword?
+If the function body of the higher-order function's parameter is too large, using inline can increase runtime. This happens because the body of the function is directly pasted into the higher-order function, which increases the size of the generated file in the background, thus increasing build time. It might add just a second, but if we do this across many functions, it can lead to a significant delay. So, the function should not be called excessively.
+
+If build time is not a major concern, and you're working on a powerful device, and improving runtime performance is more important, you can go ahead and use it. However, using inline unnecessarily everywhere can increase the application's size and make long-term management more difficult.
+
+If build time is critical for you, the use of inline should be limited. But of course: User experience > build time.
+
+A quick summary to remember:
+The function body is large, called once: It's fine to use inline.
+The function body is small, called many times: It's better not to use inline.
+The function body is small, called once: It doesn't matter, it's up to you.
+The function body is large, called once: Using inline might be beneficial.
