@@ -15,7 +15,7 @@ Additionally, I’ve shared the Turkish version of these notes as a series on [M
       <a href="#basic-types">Basic Types</a>
     </li>
     <li><a href="#control-flows">Control Flows</a></li>
-    <li><a href="#loops-and-functions">Loops and Functions</a></li>
+    <li><a href="#functions">Functions</a></li>
   </ol>
 </details>
 
@@ -339,7 +339,7 @@ return: Used to return a result from a function. The `return` statement specifie
 return@label: Enables you to return from specific labeled loops or nested functions in more complex loop structures. The `return@label` allows you to specify which function or loop you want to exit from.
 
 <h2 align="start">
-Loops and Functions
+Functions
 </h2> 
 
 ## 1- What is the performance difference between passing a String array (vararg) versus passing individual Strings?
