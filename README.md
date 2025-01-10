@@ -400,3 +400,26 @@ val String.firstLetter: Char
 ```
 Key Note
 Extension properties do not have backing fields. They are primarily used to extend the functionality of a class without modifying it and cannot act as actual variables.
+
+## 6- Can We Extend More Than One Class with Extension Functions?
+
+Yes, just as we can extend a single class with an extension function, we can also extend multiple classes simultaneously. How, you ask? The secret lies in context receivers. This feature allows an extension function to access the properties and functions of more than one class at the same time. In other words, you can write an extension function that works with both String and Int. Let’s explain this with an example:
+```kotlin 
+context(String, Int)
+fun printInfo() {
+    println("String value: $this") // Accessing the String
+    println("Int value: $this@Int") // Accessing the Int
+}
+```
+Usage:
+```kotlin 
+with("Interview Series") {
+    with(4) {
+        printInfo()
+        // Output:
+        // String value: Interview Series
+        // Int value: 4
+    }
+}
+```
+When we write context(String, Int), this function can now work with both String and Int types simultaneously.
